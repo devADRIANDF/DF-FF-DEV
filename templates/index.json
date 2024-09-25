@@ -21,16 +21,17 @@
         "block_fjm4N8": {
           "type": "block",
           "settings": {
-            "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
-            "hero_title": "STYLE, COMFORT & PERFORMANCE,",
-            "hero_subtitle": "AT IT'S PEAK.",
-            "hero_description": "Flexible sunglasses that self-adjust. Style and comfort at it's peak.",
-            "hero_button_text": "Shop by Lifestyle",
+            "hero_background_image": "https://cdn.shopify.com/videos/c/o/v/6d1261f59f214730a15742b43d994fc8.mp4",
+            "hero_title": "",
+            "hero_subtitle": "",
+            "hero_description": "",
+            "hero_button_text": "",
             "hero_button_Link": "#"
           }
         },
         "block_MiUGBq": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
             "hero_title": "STYLE, COMFORT & PERFORMANCE,",
@@ -42,6 +43,7 @@
         },
         "block_tGHtBN": {
           "type": "block",
+          "disabled": true,
           "settings": {
             "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
             "hero_title": "STYLE, COMFORT & PERFORMANCE,",
@@ -63,14 +65,15 @@
     "about_section_UxgTgY": {
       "type": "about-section",
       "settings": {
-        "title": "AS BAMBOO."
+        "title": "AS FLEXIBLE AS BAMBOO.",
+        "video_link": "shopify://files/videos/lentes_despiece_1 (1440p) (1).mp4"
       }
     },
     "product_slider_66CxJF": {
       "type": "product-slider",
       "settings": {
         "category_title": "Best SELLERs",
-        "collection": "frontpage"
+        "collection": "best-sellers"
       }
     },
     "category_slider_RyjfVk": {
@@ -87,6 +90,7 @@
         "block_RXdknL": {
           "type": "block",
           "settings": {
+            "collection_image": "shopify://shop_images/forceflex5632_1.jpg",
             "title": "PERFECT VISION, PERFECT DRIFT.",
             "button_text": "Shop FISHING",
             "button_Link": "#"
@@ -95,6 +99,7 @@
         "block_RjVjBF": {
           "type": "block",
           "settings": {
+            "collection_image": "shopify://shop_images/forceflex6060_1.jpg",
             "title": "BY CONQUERORS FOR CONQUERORS.",
             "button_text": "Shop GOLF",
             "button_Link": "#"
@@ -103,6 +108,7 @@
         "block_xitj6D": {
           "type": "block",
           "settings": {
+            "collection_image": "shopify://shop_images/forceflex5895_1_1.jpg",
             "title": "STYLE & COMFORT, AT IT'S PEAK.",
             "button_text": "Shop BICYCLE",
             "button_Link": "#"
@@ -120,7 +126,8 @@
     "sequence_image_X3UxWE": {
       "type": "sequence-image",
       "settings": {
-        "title": "FORCEFLEX TECHNOLOGY"
+        "title": "FORCEFLEX TECHNOLOGY",
+        "video_link": "shopify://files/videos/lentes_despiece_2 (1080p) (1).mp4"
       }
     },
     "unique_category_slider_QD6iz8": {
@@ -129,6 +136,7 @@
         "block_eXNQEG": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/unique1_0d8c2223-4dd6-4b0d-ad3c-9df5dc5b6cbc_1.webp",
             "title": "Flex",
             "subtitle": "it, Twist it, Fold it. Won't break. Ever.",
             "button_Link": ""
@@ -137,6 +145,7 @@
         "block_CJCxcf": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/unique2_7b4fce0c-3d13-49c3-b1df-50d74be025e2_1.jpg",
             "title": "Memory.",
             "subtitle": "It returns to it's original position, seamlessly.",
             "button_Link": ""
@@ -145,6 +154,7 @@
         "block_ifrVKK": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/PQWSsehtzGMQN0TuYTr1p8EIdlw_1.png",
             "title": "Comfort.",
             "subtitle": "You've never experienced anything like it.",
             "button_Link": ""
@@ -153,6 +163,7 @@
         "block_kEqzLH": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/unique4_d5369ab7-7988-4675-83ec-4c66840b6c0f_1.jpg",
             "title": "Military Technology.",
             "subtitle": "Created by the world’s top tactical eyewear designer.",
             "button_Link": ""
@@ -161,6 +172,7 @@
         "block_bVaCVH": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/QR2zHZumuJjOpCVpFejlV7VVbQ_1.png",
             "title": "Intrablock®.",
             "subtitle": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated.",
             "button_Link": ""
@@ -169,14 +181,16 @@
         "block_nztpWY": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/KwhgoeCYbdiXF04CUdrCFLVYmg_1.png",
             "title": "Impact absortion.",
-            "subtitle": "Here goes a 2-3 line description.",
+            "subtitle": "Just in case",
             "button_Link": ""
           }
         },
         "block_zx8gwX": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/1zLNk6lK12qbtQkBbZbDKex8Cnk_1.webp",
             "title": "Lifetime Guarantee.",
             "subtitle": "Yes. Really.",
             "button_Link": ""
@@ -185,6 +199,7 @@
         "block_JC9phg": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/PugwQG0l582SU4uhyeiOR0Xdm0w_1.webp",
             "title": "97 Patents.",
             "subtitle": "Worldwide. We are Authentic, the Real Deal.",
             "button_Link": ""
@@ -204,7 +219,8 @@
       "settings": {
         "section_title": "What makes us unique",
         "section_explore_more": "explore more",
-        "section_explore_link": ""
+        "section_explore_link": "",
+        "section_padding": "false"
       }
     },
     "multi_layer_cEnVFA": {
@@ -213,13 +229,14 @@
         "title": "MULTI-LAYER PROPRIETARY INTRABLOCK® POLARIZED LENS",
         "description": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated so it never wears off.",
         "button_text": "Learn More",
-        "button_Link": ""
+        "button_Link": "",
+        "video_link": "shopify://files/videos/lentes_despiece (1440p) (1) (1).mp4"
       }
     },
     "video_section_TrVPpJ": {
       "type": "video-section",
       "settings": {
-        "video_link": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4"
+        "video_link": "https://cdn.shopify.com/videos/c/o/v/b15a4a3a01a2458ba9df333f73f01907.mp4"
       }
     }
   },
