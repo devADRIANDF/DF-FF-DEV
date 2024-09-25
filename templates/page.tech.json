@@ -15,25 +15,12 @@
       "settings": {
       }
     },
-    "hero_section_8HGVWG": {
-      "type": "hero-section",
-      "blocks": {
-        "block_RAxnDk": {
-          "type": "block",
-          "settings": {
-            "hero_background_image": "https://cdn.shopify.com/videos/c/o/v/12dcf11eb5974df48be471cfb2a2b8ce.mp4",
-            "hero_title": "TECHNOLOGY",
-            "hero_subtitle": "",
-            "hero_description": "",
-            "hero_button_text": "",
-            "hero_button_Link": ""
-          }
-        }
-      },
-      "block_order": [
-        "block_RAxnDk"
-      ],
+    "video_hero_banner_aW3Jkm": {
+      "type": "video-hero-banner",
       "settings": {
+        "hero_background_image": "https://cdn.shopify.com/videos/c/o/v/12dcf11eb5974df48be471cfb2a2b8ce.mp4",
+        "hero_title": "TECHNOLOGY",
+        "hero_subtitle": ""
       }
     },
     "unique_category_slider_e7jfzy": {
@@ -42,6 +29,7 @@
         "block_QTAmTx": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/unique1_0d8c2223-4dd6-4b0d-ad3c-9df5dc5b6cbc_1.webp",
             "title": "Flex",
             "subtitle": "it, Twist it, Fold it. Won't break. Ever.",
             "button_Link": ""
@@ -50,6 +38,7 @@
         "block_VbdCar": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/unique2_7b4fce0c-3d13-49c3-b1df-50d74be025e2_1.jpg",
             "title": "Memory.",
             "subtitle": "It returns to it's original position, seamlessly.",
             "button_Link": ""
@@ -58,6 +47,7 @@
         "block_wAwTx8": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/PQWSsehtzGMQN0TuYTr1p8EIdlw_1.png",
             "title": "Comfort.",
             "subtitle": "You've never experienced anything like it.",
             "button_Link": ""
@@ -66,6 +56,7 @@
         "block_kQP7DM": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/unique4_d5369ab7-7988-4675-83ec-4c66840b6c0f_1.jpg",
             "title": "Military Technology.",
             "subtitle": "Created by the world’s top tactical eyewear designer.",
             "button_Link": ""
@@ -74,6 +65,7 @@
         "block_9D78hc": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/QR2zHZumuJjOpCVpFejlV7VVbQ_1.png",
             "title": "Intrablock®.",
             "subtitle": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated.",
             "button_Link": ""
@@ -82,6 +74,7 @@
         "block_BGCXth": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/KwhgoeCYbdiXF04CUdrCFLVYmg_1.png",
             "title": "Impact absortion.",
             "subtitle": "2 LINES",
             "button_Link": ""
@@ -90,6 +83,7 @@
         "block_jQYjMF": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/1zLNk6lK12qbtQkBbZbDKex8Cnk_1.webp",
             "title": "Lifetime Guarantee.",
             "subtitle": "Yes. Really.",
             "button_Link": ""
@@ -98,6 +92,7 @@
         "block_4Fr9WP": {
           "type": "block",
           "settings": {
+            "bg_image": "shopify://shop_images/PugwQG0l582SU4uhyeiOR0Xdm0w_1.webp",
             "title": "97 Patents.",
             "subtitle": "Worldwide. We are Authentic, the Real Deal.",
             "button_Link": ""
@@ -124,13 +119,14 @@
     "technology_sequence_ya89yB": {
       "type": "technology-sequence",
       "settings": {
-        "title": ""
+        "title": "",
+        "video_link": "shopify://files/videos/lentes_despiece_3 (1440p) (2).mp4"
       }
     }
   },
   "order": [
     "main",
-    "hero_section_8HGVWG",
+    "video_hero_banner_aW3Jkm",
     "unique_category_slider_e7jfzy",
     "technology_sequence_ya89yB"
   ]
