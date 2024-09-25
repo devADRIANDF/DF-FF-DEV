@@ -120,11 +120,18 @@
         "section_explore_link": "",
         "section_padding": "true"
       }
+    },
+    "technology_sequence_ya89yB": {
+      "type": "technology-sequence",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
     "main",
     "hero_section_8HGVWG",
-    "unique_category_slider_e7jfzy"
+    "unique_category_slider_e7jfzy",
+    "technology_sequence_ya89yB"
   ]
 }
