@@ -79,9 +79,9 @@
     "category_slider_RyjfVk": {
       "type": "category-slider",
       "settings": {
-        "category_title": "Shop by Lifestlye",
-        "view_all_text": "View All",
-        "view_all_url": "shopify://collections"
+        "category_title": "Shop by Lifestyle",
+        "view_all_text": "",
+        "view_all_url": ""
       }
     },
     "collection_box_7dtz4y": {
