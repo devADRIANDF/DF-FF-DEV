@@ -1,0 +1,50 @@
+<section class="hero-slider-s2">
+  <div class="video-bg">
+    <video
+      class="no-controls"
+      src="{{ section.settings.hero_background_image }}"
+      loop="true"
+      playsinline
+      autoplay
+      muted></video>
+  </div>
+  <div class="slide-inner slide-bg-image">
+    <div class="container-fluid">
+      <div class="slide-content">
+        <div data-swiper-parallax="300" class="slide-title">
+          <h2>{{ section.settings.hero_title }}
+            <span>{{ section.settings.hero_subtitle }}</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Video hero Section",
+    "settings": [
+      {
+        "type": "url",
+        "id": "hero_background_image",
+        "label": "Background Video",
+        "info": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4"
+      }, {
+        "type": "text",
+        "id": "hero_title",
+        "label": "Hero Title",
+        "default": "STYLE, COMFORT & PERFORMANCE,"
+      }, {
+        "type": "text",
+        "id": "hero_subtitle",
+        "label": "Hero Subtitle",
+        "default": "AT IT'S PEAK."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Video hero Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,68 @@
+{%- paginate search.results by 50 -%}
+  <section class="product-selling-section style section-padding pl-60">
+    <div class="product-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          {% if search.results.size > 0 %}
+            {% for product in search.results %}
+              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
+                <div class="product-item wow fadeInUp" data-wow-duration="1000ms">
+                  <div class="product-img">
+                    <a href="{{ product.url }}" class="product-image">
+                      <div class="image-wrap">
+                        <img
+                          class="image1 hover-image"
+                          src="{{ product.featured_image | image_url: width: 900  }}"
+                          alt="{{ product.title }}"
+                          width=""
+                          height="">
+                        <img
+                          class="image2 hidden-image"
+                          src="{{ product.images[1] | image_url: width: 900  }}"
+                          alt="{{ product.title }}"
+                          width=""
+                          height="">
+                      </div>
+                    </a>
+                    <div class="cart-btn sliderAddToCart" data-itemid="{{ product.variants.first.id }}">
+                      <a href="#" class="theme-btn cartBtn">Add to Cart</a>
+                      <a
+                        href="#"
+                        class="theme-btn loadingBtn"
+                        style="display: none;">Loading..</a>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h2>
+                      <a href="{{ product.url }}">{{ product.title }}</a>
+                    </h2>
+                    {% if product.tags contains '1 Colors' %}
+                      <p>3 Colors</p>
+                    {% endif %}
+                    {% if product.tags contains '2 Colors' %}
+                      <p>2 Colors</p>
+                    {% endif %}
+                    {% if product.tags contains '3 Colors' %}
+                      <p>3 Colors</p>
+                    {% endif %}
+                    {% if product.tags contains '4 Colors' %}
+                      <p>4 Colors</p>
+                    {% endif %}
+                    {% if product.tags contains '5 Colors' %}
+                      <p>5 Colors</p>
+                    {% endif %}
+                    <div class="price">
+                      <span>{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% else %}
+            <h2>No data found!</h2>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{%- endpaginate -%}

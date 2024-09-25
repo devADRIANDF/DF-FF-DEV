@@ -1,0 +1,92 @@
+{% assign limit_product = 100 %}
+{%- paginate collections.all.products by limit_product -%}
+  <section class="product-selling-section style section-padding pl-60">
+    <div class="product-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          {% assign products_by_price = collection.products %}
+          {% assign collection = collection %}
+          {% assign limit = section.settings.product_count %}
+          {% for product in products_by_price limit: limit %}
+            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
+              <div class="product-item wow fadeInUp" data-wow-duration="1000ms">
+                <div class="product-img">
+                  <a href="{{ product.url }}" class="product-image">
+                    <div class="image-wrap">
+                      <img
+                        class="image1 hover-image"
+                        src="{{ product.featured_image | image_url: width: 900  }}"
+                        alt="{{ product.title }}"
+                        width=""
+                        height="">
+                      <img
+                        class="image2 hidden-image"
+                        src="{{ product.images[1] | image_url: width: 900  }}"
+                        alt="{{ product.title }}"
+                        width=""
+                        height="">
+                    </div>
+                  </a>
+                  <div class="cart-btn sliderAddToCart" data-itemid="{{ product.variants.first.id }}">
+                    <a href="#" class="theme-btn cartBtn">Add to Cart</a>
+                    <a
+                      href="#"
+                      class="theme-btn loadingBtn"
+                      style="display: none;">Loading..</a>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h2>
+                    <a href="{{ product.url }}">{{ product.title }}</a>
+                  </h2>
+                  {% if product.tags contains '1 Colors' %}
+                    <p>3 Colors</p>
+                  {% endif %}
+                  {% if product.tags contains '2 Colors' %}
+                    <p>2 Colors</p>
+                  {% endif %}
+                  {% if product.tags contains '3 Colors' %}
+                    <p>3 Colors</p>
+                  {% endif %}
+                  {% if product.tags contains '4 Colors' %}
+                    <p>4 Colors</p>
+                  {% endif %}
+                  {% if product.tags contains '5 Colors' %}
+                    <p>5 Colors</p>
+                  {% endif %}
+                  <div class="price">
+                    <span>{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+{%- endpaginate -%}
+
+
+{% schema %}
+  {
+    "name": "Product Grid",
+    "settings": [
+      {
+        "type": "range",
+        "id": "product_count",
+        "label": "Number of Products",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "default": 4
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Product Grid"
+      }
+    ]
+  }
+{% endschema %}

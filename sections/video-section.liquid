@@ -1,0 +1,37 @@
+<section class="video-section section-padding px-60">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-12">
+        <div class="video-item">
+          <video
+            class="no-controls"
+            src="{{ section.settings.video_link }}"
+            playsinline
+            autoplay
+            loop
+            muted></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Video Section",
+    "settings": [
+      {
+        "type": "url",
+        "id": "video_link",
+        "label": "Video Link",
+        "info": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Video Section"
+      }
+    ]
+  }
+{% endschema %}

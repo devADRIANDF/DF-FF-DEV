@@ -1,0 +1,107 @@
+<section class="unique-category-section section-padding pl-60 {% if section.settings.section_padding == "false" %} pt-0 {% endif %} ">
+  <div class="section-title">
+    <h2>
+      <span>{{ section.settings.section_title }}</span>
+      <a href="{{ section.settings.section_explore_link }}">{{ section.settings.section_explore_more }}</a>
+    </h2>
+  </div>
+  <div class="unique-category">
+    <div class="container-fluid">
+      <div class="row unique-category-active owl-carousel">
+
+        {% for block in section.blocks %}
+          <div class="category-item wow fadeInUp" data-wow-duration="100ms">
+            <a href="{{ block.settings.button_Link }}" class="category-image">
+              <img
+                src="{{ block.settings.bg_image |  image_url: width: 900  }}"
+                alt="Image"
+                width=""
+                height="">
+            </a>
+            <div class="category-info">
+              <h2>
+                <span>{{ block.settings.title }}</span>
+                {{ block.settings.subtitle }}</h2>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Unique Collection Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Title",
+        "default": "What makes us unique"
+      }, {
+        "type": "text",
+        "id": "section_explore_more",
+        "label": "Explore More Text",
+        "default": "explore more"
+      }, {
+        "type": "url",
+        "id": "section_explore_link",
+        "label": "Explore More Link"
+      }, {
+        "type": "radio",
+        "id": "section_padding",
+        "label": "Section Padding",
+        "options": [
+          {
+            "value": "true",
+            "label": "Padding"
+          }, {
+            "value": "false",
+            "label": "No Padding"
+          }
+        ],
+        "default": "false"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Slider",
+        "type": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Intrablock®."
+          }, {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated."
+          }, {
+            "type": "url",
+            "id": "button_Link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Unique Collection Section",
+        "blocks": [
+          {
+            "type": "block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

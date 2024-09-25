@@ -1,0 +1,206 @@
+<!-- start of footer-section -->
+<footer class="footer-section s2 px-60">
+  <div class="upper-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="widget newslatter-widget">
+            <div class="logo">
+              {% if section.settings.footer_logo != blank %}
+                <img
+                  src="{{ section.settings.footer_logo |  image_url: width:400  }}"
+                  alt=""
+                  width=""
+                  height="">
+              {% else %}
+                <img
+                  src="{{ 'logo.png' | asset_url }}"
+                  alt=""
+                  width=""
+                  height="">
+              {% endif %}
+
+            </div>
+            <p>{{ section.settings.newslatter_text }}</p>
+
+            {% form 'contact' %}
+              {{ form.errors | default_errors }}
+              <div class="form-section">
+                <input
+                  type="text"
+                  placeholder="mail@gmail.com"
+                  name="contact[email]">
+                <button>Submit</button>
+              </div>
+              <div class="form-message">
+                {% if form.posted_successfully? %}
+                  <p class="mt-2">Thank you for signing up!
+                  </p>
+                {% endif %}
+              </div>
+            {%- endform -%}
+
+            <ul>
+              {% if section.settings.instagram != blank %}
+                <li>
+                  <a href="{{ section.settings.instagram }}"><img
+                      src="{{ 'instagram.svg' | asset_url }}"
+                      alt=""
+                      width=""
+                      height=""></a>
+                </li>
+              {% endif %}
+              {% if section.settings.youtube != blank %}
+                <li>
+                  <a href="{{ section.settings.youtube }}"><img
+                      src="{{ 'youtube.svg' | asset_url }}"
+                      alt=""
+                      width=""
+                      height=""></a>
+                </li>
+              {% endif %}
+              {% if section.settings.twitter != blank %}
+                <li>
+                  <a href="{{ section.settings.twitter }}"><img
+                      src="{{ 'twitter.svg' | asset_url }}"
+                      alt=""
+                      width=""
+                      height=""></a>
+                </li>
+              {% endif %}
+
+            </ul>
+          </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+          <div class="widget link-widget">
+            <div class="widget-title">
+              <span>{{ section.settings.forceflex_links_title }}</span>
+            </div>
+            <ul>
+              {% for link in linklists[section.settings.forceflex_links].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-12 col-12">
+          <div class="widget link-widget custom">
+            <div class="widget-title">
+              <span>{{ section.settings.contact_links_title }}</span>
+            </div>
+            <ul>
+              {% for link in linklists[section.settings.contact_links].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col col-lg-2 col-md-6 col-sm-12 col-12">
+          <div class="widget link-widget custom">
+            <div class="widget-title">
+              <span>{{ section.settings.privacy_links_title }}</span>
+            </div>
+            <ul>
+              {% for link in linklists[section.settings.policies_links].links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end container -->
+  </div>
+  <div class="lower-footer">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="copy-wrap">
+          <p class="copyright">{{ section.settings.copyright_text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end of site-footer-section -->
+
+
+{% schema %}
+  {
+    "name": "Footer Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "forceflex_links_title",
+        "label": "Forceflex Links Title",
+        "default": "Forceflex"
+      },
+      {
+        "type": "link_list",
+        "id": "forceflex_links",
+        "label": "Forceflex Links"
+      },
+      {
+        "type": "text",
+        "id": "contact_links_title",
+        "label": "Contact Us Links Title",
+        "default": "Contact Us"
+      },
+      {
+        "type": "link_list",
+        "id": "contact_links",
+        "label": "Contact Us Links"
+      }, {
+        "type": "text",
+        "id": "privacy_links_title",
+        "label": "Policies Links Title",
+        "default": "Policies"
+      }, {
+        "type": "link_list",
+        "id": "policies_links",
+        "label": "Policies Links"
+      }, {
+        "type": "text",
+        "id": "newslatter_text",
+        "label": "Newsletter Text",
+        "default": "Subscribe to our newsletter."
+      }, {
+        "type": "image_picker",
+        "id": "footer_logo",
+        "label": "Footer Logo"
+      }, {
+        "type": "text",
+        "id": "copyright_text",
+        "label": "Copyright Text",
+        "default": "©Reserved Rights, Forceflex 2024"
+      }, {
+        "type": "url",
+        "id": "instagram",
+        "label": "Instagram",
+        "info": "https://www.instagram.com/"
+      }, {
+        "type": "url",
+        "id": "youtube",
+        "label": "Youtube",
+        "info": "https://www.youtube.com/"
+      }, {
+        "type": "url",
+        "id": "twitter",
+        "label": "Twitter",
+        "info": "https://twitter.com/"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Footer Section"
+      }
+    ]
+  }
+{% endschema %}

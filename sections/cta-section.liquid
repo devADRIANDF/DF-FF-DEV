@@ -1,0 +1,48 @@
+<!-- start of cta-section -->
+<section class="cta-section section-padding pt-0">
+  <div class="container">
+    <div class="cta-wrap">
+      <div class="cta-text">
+        <h3>{{ section.settings.title }}</h3>
+        <p>{{ section.settings.description }}</p>
+      </div>
+      <div class="cta-btn">
+        <a href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "CTA Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "LIFETIME WARRANTY"
+      }, {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "We know our product. And you will discover why we offer this."
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Shop"
+      }, {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button URL"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "CTA Section"
+      }
+    ]
+  }
+{% endschema %}

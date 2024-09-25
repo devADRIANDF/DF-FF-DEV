@@ -1,0 +1,44 @@
+<section class="hero-slider-s2" style="background: url({{section.settings.background_image | image_url: width: 1920 }}) no-repeat;  background-size: cover;">
+  <div class="slide-inner slide-bg-image">
+    <div class="container-fluid">
+      <div class="slide-content">
+        <div data-swiper-parallax="300" class="slide-title">
+          <h2>{{ section.settings.title }}
+            <span>{{ section.settings.description }}</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end slide-inner -->
+</section>
+
+
+{% schema %}
+  {
+    "name": "Collection Hero Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "ELEVATE GOLF"
+      }, {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "WITH FORCEFLEX"
+      }, {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Collection Hero Section"
+      }
+    ]
+  }
+{% endschema %}

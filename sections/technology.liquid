@@ -1,0 +1,231 @@
+<!-- start of technology-section -->
+<section class="technology-section section-padding px-60">
+  <div class="container-fluid">
+    <div class="technology-title">
+      <h3>{{ section.settings.section_title }}</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-12">
+        <div class="technology-item">
+          <div class="part-wrap">
+            <div class="part-left">
+              <div class="part-img wow fadeInLeftSlow" data-wow-duration="2000ms">
+                <img
+                  src="{{section.settings.part_three_image | image_url: width:1000 }}"
+                  alt=""
+                  width=""
+                  height="">
+                <div class="info">
+                  <div class="thumb">
+                    <span>3</span>
+                  </div>
+                  <div class="info-text">
+                    <h3>{{ section.settings.part_three_title }}</h3>
+                    <p>{{ section.settings.part_three_description }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="part-img2 wow fadeInLeftSlow" data-wow-duration="1500ms">
+                <img
+                  src="{{section.settings.part_three_image_sub |  image_url: width:1000 }}"
+                  width=""
+                  height=""
+                  alt="">
+              </div>
+            </div>
+            <div class="part-right">
+              <div class="part-img wow fadeInRightSlow" data-wow-duration="1500ms">
+                <img
+                  src="{{section.settings.part_two_image |  image_url: width: 1000 }}"
+                  width=""
+                  height=""
+                  alt="">
+              </div>
+              <div class="part-img2 wow fadeInRightSlow" data-wow-duration="2000ms">
+                <img
+                  src="{{section.settings.part_two_image_sub |  image_url: width: 1000 }}"
+                  width=""
+                  height=""
+                  alt="">
+                <div class="info s2">
+                  <div class="thumb">
+                    <span>2</span>
+                  </div>
+                  <div class="info-text">
+                    <h3>{{ section.settings.part_two_title }}</h3>
+                    <p>{{ section.settings.part_two_description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part-bottom">
+            <div class="part-img wow fadeInUp" data-wow-duration="1500ms">
+              <img
+                src="{{ section.settings.part_five_image |  image_url: width: 1000 }}"
+                width=""
+                height=""
+                alt="">
+              <div class="info">
+                <div class="thumb">
+                  <span>5</span>
+                </div>
+                <div class="info-text">
+                  <h3>{{ section.settings.part_five_title }}</h3>
+                  <p>{{ section.settings.part_five_description }}</p>
+                </div>
+              </div>
+              <div class="info s2">
+                <div class="thumb">
+                  <span>4</span>
+                </div>
+                <div class="info-text">
+                  <h3>{{ section.settings.part_four_title }}</h3>
+                  <p>{{ section.settings.part_four_description }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="part-img2 wow fadeInUp" data-wow-duration="1700ms">
+              <img
+                src="{{ section.settings.part_one_image |  image_url: width: 1000 }}"
+                alt=""
+                width=""
+                height="">
+              <div class="info s2">
+                <div class="thumb">
+                  <span>1</span>
+                </div>
+                <div class="info-text">
+                  <h3>{{ section.settings.part_one_title }}</h3>
+                  <p>{{ section.settings.part_one_description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="part-img3 wow fadeInUp" data-wow-duration="1900ms">
+            <div class="part-img-l">
+              <img
+                src="{{ section.settings.part_one_image_sub |  image_url: width: 1000 }}"
+                width=""
+                height=""
+                alt="">
+            </div>
+            <div class="part-img-l">
+              <img
+                src="{{ section.settings.part_one_image_sub_2 |  image_url: width: 1000 }}"
+                width=""
+                height=""
+                alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Technoloy Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "FLEXFORCE TECHNOLOGY®"
+      },
+      {
+        "type": "image_picker",
+        "id": "part_one_image",
+        "label": "Part One Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "part_one_image_sub",
+        "label": "Part One Sub Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "part_one_image_sub_2",
+        "label": "Part One Sub Image 2"
+      }, {
+        "type": "text",
+        "id": "part_one_title",
+        "label": "Part One Title",
+        "default": "Extreme Protection"
+      }, {
+        "type": "text",
+        "id": "part_one_description",
+        "label": "Part One Description",
+        "default": "Frames absorb impact and dissipate energy for protection that exceedes ballistic standards."
+      }, {
+        "type": "image_picker",
+        "id": "part_two_image",
+        "label": "Part Two Image"
+      }, {
+        "type": "image_picker",
+        "id": "part_two_image_sub",
+        "label": "Part Two Sub Image 1"
+      }, {
+        "type": "text",
+        "id": "part_two_title",
+        "label": "Part Two Title",
+        "default": "Superior Comfort"
+      }, {
+        "type": "text",
+        "id": "part_two_description",
+        "label": "Part Two Description",
+        "default": "Soft feel elastomer shell provides an overall cushioned fit."
+      }, {
+        "type": "image_picker",
+        "id": "part_three_image",
+        "label": "Part Three Image"
+      }, {
+        "type": "image_picker",
+        "id": "part_three_image_sub",
+        "label": "Part Three Sub Image 1"
+      }, {
+        "type": "text",
+        "id": "part_three_title",
+        "label": "Part Three Title",
+        "default": "Greater Stability"
+      }, {
+        "type": "text",
+        "id": "part_three_description",
+        "label": "Part Three Description",
+        "default": "Non-slip overmold finish increases adhesion for a better grip."
+      }, {
+        "type": "text",
+        "id": "part_four_title",
+        "label": "Part Four Title",
+        "default": "Ultra-Light Frame"
+      }, {
+        "type": "text",
+        "id": "part_four_description",
+        "label": "Part Four Description",
+        "default": "Weight reduction through the combination of multi-density materials."
+      }, {
+        "type": "image_picker",
+        "id": "part_five_image",
+        "label": "Part One Image"
+      }, {
+        "type": "text",
+        "id": "part_five_title",
+        "label": "Part Five Title",
+        "default": "Enhanced Flexibility"
+      }, {
+        "type": "text",
+        "id": "part_five_description",
+        "label": "Part Five Description",
+        "default": "Thinner more flexible plastic skeleton designed for more adaptability and comfort."
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Technoloy Section"
+      }
+    ]
+  }
+{% endschema %}

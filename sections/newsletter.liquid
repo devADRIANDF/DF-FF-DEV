@@ -1,0 +1,98 @@
+     <!-- start of newslatter-section -->
+<section class="newslatter-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="newslatter-item">
+                    <div class="newslatter-info">
+                        <h2 class="wow fadeInUp" data-wow-duration="1000ms">{{ section.settings.section_title }}</h2>
+                        <p class="wow fadeInUp" data-wow-duration="1000ms">{{ section.settings.section_description }}
+                        </p>
+                        <a class="popup-youtube wow fadeInUp" data-wow-duration="1000ms"
+                            href="{{ section.settings.video_link }}">{{ section.settings.video_button_text }}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+                                focusable="false" color="rgb(102, 102, 255)"
+                                style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(102, 102, 255); color: rgb(102, 102, 255); flex-shrink: 0;">
+                                <g color="rgb(102, 102, 255)" weight="fill">
+                                    <path d="M128,24A104,104,0,1,0,232,128,104.13,104.13,0,0,0,128,24Zm36.44,110.66-48,32A8.05,8.05,0,0,1,112,168a8,8,0,0,1-8-8V96a8,8,0,0,1,12.44-6.66l48,32a8,8,0,0,1,0,13.32Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="newslatter-image">
+                        <img src="{{ section.settings.image | image_url: width: 1920 }}" alt="Image" width="" height="">
+                    </div>
+
+                    {% form 'contact' %}
+                  
+                    {{ form.errors | default_errors }}
+                        <div class="form-field">
+                            <input type="text" placeholder="{{ section.settings.input_placeholder }}" name="contact[email]">
+                            <button>{{ section.settings.button_text }}</button>
+                        </div>
+                          {% if form.posted_successfully? %} <p class="text-center mt-2">Thank you for signing up! </p> {% endif %}
+                     {%- endform -%} 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% schema %}
+  {
+    "name": "Newsletter Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "HAVOC®"
+      },
+      {
+        "type": "text",
+        "id": "section_description",
+        "label": "Section Description",
+        "default": "Avaliable late January, 2024"
+      },
+      {
+        "type": "text",
+        "id": "video_button_text",
+        "label": "Video Button Text",
+        "default": "Watch the trailer"
+      },
+      {
+        "type": "text",
+        "id": "video_link",
+        "label": "Video Link",
+        "default": "https://www.youtube.com/watch?v=v=Wzkx-_e-Evg"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "input_placeholder",
+        "label": "Input Placeholder",
+        "default": "Enter your email"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Join Wialtlist",
+        "default": "Join Wailtlist"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Newsletter Section"
+      }
+    ]
+  }
+{% endschema %}

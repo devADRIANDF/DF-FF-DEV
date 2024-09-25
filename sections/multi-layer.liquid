@@ -1,0 +1,68 @@
+<section class="image-sequence-container3 px-60 add-black muli-layer">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 col-12">
+        <div class="multi-item">
+          <div class="multi-info">
+            <h2>{{ section.settings.title }}</h2>
+            <p>{{ section.settings.description }}</p>
+            <div class="muti-sec-btn">
+              <a href="{{ section.settings.button_Link }}" class="theme-btn">{{ section.settings.button_text }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-12">
+        <div class="image-sequence">
+          <video
+            class="no-controls video-div"
+            src="{{ section.settings.video_link.sources[1].url }}"
+            playsinline
+            autoplay
+            loop
+            muted></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Multi Layer Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "MULTI-LAYER PROPRIETARY INTRABLOCK® POLARIZED LENS"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated so it never wears off."
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "Learn More"
+      },
+      {
+        "type": "url",
+        "id": "button_Link",
+        "label": "Button Link"
+      }, {
+        "type": "video",
+        "id": "video_link",
+        "label": "Video Link"
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Multi Layer Section"
+      }
+    ]
+  }
+{% endschema %}
