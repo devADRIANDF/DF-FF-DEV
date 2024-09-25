@@ -21,7 +21,7 @@
         "block_RAxnDk": {
           "type": "block",
           "settings": {
-            "hero_background_image": "",
+            "hero_background_image": "https://cdn.shopify.com/videos/c/o/v/12dcf11eb5974df48be471cfb2a2b8ce.mp4",
             "hero_title": "TECHNOLOGY",
             "hero_subtitle": "",
             "hero_description": "",
@@ -35,10 +35,96 @@
       ],
       "settings": {
       }
+    },
+    "unique_category_slider_e7jfzy": {
+      "type": "unique-category-slider",
+      "blocks": {
+        "block_QTAmTx": {
+          "type": "block",
+          "settings": {
+            "title": "Flex",
+            "subtitle": "it, Twist it, Fold it. Won't break. Ever.",
+            "button_Link": ""
+          }
+        },
+        "block_VbdCar": {
+          "type": "block",
+          "settings": {
+            "title": "Memory.",
+            "subtitle": "It returns to it's original position, seamlessly.",
+            "button_Link": ""
+          }
+        },
+        "block_wAwTx8": {
+          "type": "block",
+          "settings": {
+            "title": "Comfort.",
+            "subtitle": "You've never experienced anything like it.",
+            "button_Link": ""
+          }
+        },
+        "block_kQP7DM": {
+          "type": "block",
+          "settings": {
+            "title": "Military Technology.",
+            "subtitle": "Created by the world’s top tactical eyewear designer.",
+            "button_Link": ""
+          }
+        },
+        "block_9D78hc": {
+          "type": "block",
+          "settings": {
+            "title": "Intrablock®.",
+            "subtitle": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated.",
+            "button_Link": ""
+          }
+        },
+        "block_BGCXth": {
+          "type": "block",
+          "settings": {
+            "title": "Impact absortion.",
+            "subtitle": "2 LINES",
+            "button_Link": ""
+          }
+        },
+        "block_jQYjMF": {
+          "type": "block",
+          "settings": {
+            "title": "Lifetime Guarantee.",
+            "subtitle": "Yes. Really.",
+            "button_Link": ""
+          }
+        },
+        "block_4Fr9WP": {
+          "type": "block",
+          "settings": {
+            "title": "97 Patents.",
+            "subtitle": "Worldwide. We are Authentic, the Real Deal.",
+            "button_Link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_QTAmTx",
+        "block_VbdCar",
+        "block_wAwTx8",
+        "block_kQP7DM",
+        "block_9D78hc",
+        "block_BGCXth",
+        "block_jQYjMF",
+        "block_4Fr9WP"
+      ],
+      "settings": {
+        "section_title": "What makes us unique",
+        "section_explore_more": "",
+        "section_explore_link": "",
+        "section_padding": "true"
+      }
     }
   },
   "order": [
     "main",
-    "hero_section_8HGVWG"
+    "hero_section_8HGVWG",
+    "unique_category_slider_e7jfzy"
   ]
 }
