@@ -1,1 +1,60 @@
-{"current":{"sections":{"hearder":{"type":"hearder","settings":{"main_menu":"main-menu","mobile_menu":"mobile-menu","shop_menu":"models-one","shop_menu_two":"models-two","collection_one":"bike","collection_tow":"golf","collection_menu":"desktop-collection-menu","mobile_collection_menu":"mobile-product-menu"}},"footer":{"type":"footer","settings":{"forceflex_links_title":"Forceflex","forceflex_links":"forceflex","contact_links_title":"Contact Us","contact_links":"contact-us","privacy_links_title":"Policies","policies_links":"policies","newslatter_text":"Subscribe to our newsletter.","footer_logo":"shopify:\/\/shop_images\/logo2.png","copyright_text":"©Reserved Rights, Forceflex 2024","instagram":"https:\/\/www.instagram.com\/forceflexeyewear\/","youtube":"#","twitter":"#"}}},"content_for_index":[]},"presets":{"Default":{}}}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "current": {
+    "sections": {
+      "hearder": {
+        "type": "hearder",
+        "settings": {
+          "main_menu": "main-menu",
+          "mobile_menu": "mobile-menu",
+          "shop_menu": "models-one",
+          "shop_menu_two": "models-two",
+          "collection_one": "bike",
+          "collection_tow": "golf",
+          "collection_menu": "desktop-collection-menu",
+          "mobile_collection_menu": "mobile-product-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "forceflex_links_title": "Forceflex",
+          "forceflex_links": "forceflex",
+          "contact_links_title": "Contact Us",
+          "contact_links": "contact-us",
+          "privacy_links_title": "Policies",
+          "policies_links": "policies",
+          "newslatter_text": "Subscribe to our newsletter.",
+          "footer_logo": "shopify://shop_images/logo2.png",
+          "copyright_text": "©Reserved Rights, Forceflex 2024",
+          "instagram": "https://www.instagram.com/forceflexeyewear/",
+          "youtube": "#",
+          "twitter": "#"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "6478312753674380289": {
+        "type": "shopify://apps/gempages-builder/blocks/embed-gp-script-head/20b379d4-1b20-474c-a6ca-665c331919f3",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+    }
+  }
+}
