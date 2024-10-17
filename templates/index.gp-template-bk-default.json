@@ -1,13 +1,245 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "hero_section_LtyyzG": {
+      "type": "hero-section",
+      "blocks": {
+        "block_fjm4N8": {
+          "type": "block",
+          "settings": {
+            "hero_background_image": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6d1261f59f214730a15742b43d994fc8.mp4",
+            "hero_title": "",
+            "hero_subtitle": "",
+            "hero_description": "",
+            "hero_button_text": "",
+            "hero_button_Link": "#"
+          }
+        },
+        "block_MiUGBq": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "hero_background_image": "https:\/\/framerusercontent.com\/assets\/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
+            "hero_title": "STYLE, COMFORT & PERFORMANCE,",
+            "hero_subtitle": "AT IT'S PEAK.",
+            "hero_description": "Flexible sunglasses that self-adjust. Style and comfort at it's peak.",
+            "hero_button_text": "Shop Now",
+            "hero_button_Link": ""
+          }
+        },
+        "block_tGHtBN": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "hero_background_image": "https:\/\/framerusercontent.com\/assets\/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
+            "hero_title": "STYLE, COMFORT & PERFORMANCE,",
+            "hero_subtitle": "AT IT'S PEAK.",
+            "hero_description": "Flexible sunglasses that self-adjust. Style and comfort at it's peak.",
+            "hero_button_text": "Shop by Lifestyle",
+            "hero_button_Link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_fjm4N8",
+        "block_MiUGBq",
+        "block_tGHtBN"
+      ],
+      "settings": {
+      }
+    },
+    "about_section_UxgTgY": {
+      "type": "about-section",
+      "settings": {
+        "title": "AS FLEXIBLE AS BAMBOO.",
+        "video_link": "shopify:\/\/files\/videos\/lentes_despiece_1 (1440p) (1).mp4"
+      }
+    },
+    "product_slider_66CxJF": {
+      "type": "product-slider",
+      "settings": {
+        "category_title": "Best SELLERs",
+        "collection": "best-sellers"
+      }
+    },
+    "category_slider_RyjfVk": {
+      "type": "category-slider",
+      "settings": {
+        "category_title": "Shop by Lifestyle",
+        "view_all_text": "",
+        "view_all_url": ""
+      }
+    },
+    "collection_box_7dtz4y": {
+      "type": "collection-box",
+      "blocks": {
+        "block_RXdknL": {
+          "type": "block",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/forceflex5632_1.jpg",
+            "title": "PERFECT VISION, PERFECT DRIFT.",
+            "button_text": "Shop FISHING",
+            "button_Link": "#"
+          }
+        },
+        "block_RjVjBF": {
+          "type": "block",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/forceflex6060_1.jpg",
+            "title": "BY CONQUERORS FOR CONQUERORS.",
+            "button_text": "Shop GOLF",
+            "button_Link": "#"
+          }
+        },
+        "block_xitj6D": {
+          "type": "block",
+          "settings": {
+            "collection_image": "shopify:\/\/shop_images\/forceflex5895_1_1.jpg",
+            "title": "STYLE & COMFORT, AT IT'S PEAK.",
+            "button_text": "Shop BICYCLE",
+            "button_Link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_RXdknL",
+        "block_RjVjBF",
+        "block_xitj6D"
+      ],
+      "settings": {
+      }
+    },
+    "sequence_image_X3UxWE": {
+      "type": "sequence-image",
+      "settings": {
+        "title": "FORCEFLEX TECHNOLOGY",
+        "video_link": "shopify:\/\/files\/videos\/lentes_despiece_2 (1080p) (1).mp4"
+      }
+    },
+    "unique_category_slider_QD6iz8": {
+      "type": "unique-category-slider",
+      "blocks": {
+        "block_eXNQEG": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/unique1_0d8c2223-4dd6-4b0d-ad3c-9df5dc5b6cbc_1.webp",
+            "title": "Flex",
+            "subtitle": "it, Twist it, Fold it. Won't break. Ever.",
+            "button_Link": ""
+          }
+        },
+        "block_CJCxcf": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/unique2_7b4fce0c-3d13-49c3-b1df-50d74be025e2_1.jpg",
+            "title": "Memory.",
+            "subtitle": "It returns to it's original position, seamlessly.",
+            "button_Link": ""
+          }
+        },
+        "block_ifrVKK": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/PQWSsehtzGMQN0TuYTr1p8EIdlw_1.png",
+            "title": "Comfort.",
+            "subtitle": "You've never experienced anything like it.",
+            "button_Link": ""
+          }
+        },
+        "block_kEqzLH": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/unique4_d5369ab7-7988-4675-83ec-4c66840b6c0f_1.jpg",
+            "title": "Military Technology.",
+            "subtitle": "Created by the world’s top tactical eyewear designer.",
+            "button_Link": ""
+          }
+        },
+        "block_bVaCVH": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/QR2zHZumuJjOpCVpFejlV7VVbQ_1.png",
+            "title": "Intrablock®.",
+            "subtitle": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated.",
+            "button_Link": ""
+          }
+        },
+        "block_nztpWY": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/KwhgoeCYbdiXF04CUdrCFLVYmg_1.png",
+            "title": "Impact absortion.",
+            "subtitle": "Just in case",
+            "button_Link": ""
+          }
+        },
+        "block_zx8gwX": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/1zLNk6lK12qbtQkBbZbDKex8Cnk_1.webp",
+            "title": "Lifetime Guarantee.",
+            "subtitle": "Yes. Really.",
+            "button_Link": ""
+          }
+        },
+        "block_JC9phg": {
+          "type": "block",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/PugwQG0l582SU4uhyeiOR0Xdm0w_1.webp",
+            "title": "97 Patents.",
+            "subtitle": "Worldwide. We are Authentic, the Real Deal.",
+            "button_Link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_eXNQEG",
+        "block_CJCxcf",
+        "block_ifrVKK",
+        "block_kEqzLH",
+        "block_bVaCVH",
+        "block_nztpWY",
+        "block_zx8gwX",
+        "block_JC9phg"
+      ],
+      "settings": {
+        "section_title": "What makes us unique",
+        "section_explore_more": "explore more",
+        "section_explore_link": "",
+        "section_padding": "false"
+      }
+    },
+    "multi_layer_cEnVFA": {
+      "type": "multi-layer",
+      "settings": {
+        "title": "MULTI-LAYER PROPRIETARY INTRABLOCK® POLARIZED LENS",
+        "description": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated so it never wears off.",
+        "button_text": "Learn More",
+        "button_Link": "",
+        "video_link": "shopify:\/\/files\/videos\/lentes_despiece (1440p) (1) (1).mp4"
+      }
+    },
+    "video_section_TrVPpJ": {
+      "type": "video-section",
+      "settings": {
+        "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b15a4a3a01a2458ba9df333f73f01907.mp4"
+      }
+    }
+  },
   "order": [
     "main",
     "hero_section_LtyyzG",
@@ -19,237 +251,5 @@
     "unique_category_slider_QD6iz8",
     "multi_layer_cEnVFA",
     "video_section_TrVPpJ"
-  ],
-  "sections": {
-    "about_section_UxgTgY": {
-      "settings": {
-        "title": "AS FLEXIBLE AS BAMBOO.",
-        "video_link": "shopify://files/videos/lentes_despiece_1 (1440p) (1).mp4"
-      },
-      "type": "about-section"
-    },
-    "category_slider_RyjfVk": {
-      "settings": {
-        "category_title": "Shop by Lifestyle",
-        "view_all_text": "",
-        "view_all_url": ""
-      },
-      "type": "category-slider"
-    },
-    "collection_box_7dtz4y": {
-      "block_order": [
-        "block_RXdknL",
-        "block_RjVjBF",
-        "block_xitj6D"
-      ],
-      "blocks": {
-        "block_RXdknL": {
-          "settings": {
-            "button_Link": "#",
-            "button_text": "Shop FISHING",
-            "collection_image": "shopify://shop_images/forceflex5632_1.jpg",
-            "title": "PERFECT VISION, PERFECT DRIFT."
-          },
-          "type": "block"
-        },
-        "block_RjVjBF": {
-          "settings": {
-            "button_Link": "#",
-            "button_text": "Shop GOLF",
-            "collection_image": "shopify://shop_images/forceflex6060_1.jpg",
-            "title": "BY CONQUERORS FOR CONQUERORS."
-          },
-          "type": "block"
-        },
-        "block_xitj6D": {
-          "settings": {
-            "button_Link": "#",
-            "button_text": "Shop BICYCLE",
-            "collection_image": "shopify://shop_images/forceflex5895_1_1.jpg",
-            "title": "STYLE & COMFORT, AT IT'S PEAK."
-          },
-          "type": "block"
-        }
-      },
-      "settings": {
-      },
-      "type": "collection-box"
-    },
-    "hero_section_LtyyzG": {
-      "block_order": [
-        "block_fjm4N8",
-        "block_MiUGBq",
-        "block_tGHtBN"
-      ],
-      "blocks": {
-        "block_MiUGBq": {
-          "disabled": true,
-          "settings": {
-            "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
-            "hero_button_Link": "",
-            "hero_button_text": "Shop Now",
-            "hero_description": "Flexible sunglasses that self-adjust. Style and comfort at it's peak.",
-            "hero_subtitle": "AT IT'S PEAK.",
-            "hero_title": "STYLE, COMFORT & PERFORMANCE,"
-          },
-          "type": "block"
-        },
-        "block_fjm4N8": {
-          "settings": {
-            "hero_background_image": "https://cdn.shopify.com/videos/c/o/v/6d1261f59f214730a15742b43d994fc8.mp4",
-            "hero_button_Link": "#",
-            "hero_button_text": "",
-            "hero_description": "",
-            "hero_subtitle": "",
-            "hero_title": ""
-          },
-          "type": "block"
-        },
-        "block_tGHtBN": {
-          "disabled": true,
-          "settings": {
-            "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
-            "hero_button_Link": "",
-            "hero_button_text": "Shop by Lifestyle",
-            "hero_description": "Flexible sunglasses that self-adjust. Style and comfort at it's peak.",
-            "hero_subtitle": "AT IT'S PEAK.",
-            "hero_title": "STYLE, COMFORT & PERFORMANCE,"
-          },
-          "type": "block"
-        }
-      },
-      "settings": {
-      },
-      "type": "hero-section"
-    },
-    "main": {
-      "disabled": true,
-      "settings": {
-      },
-      "type": "main-page"
-    },
-    "multi_layer_cEnVFA": {
-      "settings": {
-        "button_Link": "",
-        "button_text": "Learn More",
-        "description": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated so it never wears off.",
-        "title": "MULTI-LAYER PROPRIETARY INTRABLOCK® POLARIZED LENS",
-        "video_link": "shopify://files/videos/lentes_despiece (1440p) (1) (1).mp4"
-      },
-      "type": "multi-layer"
-    },
-    "product_slider_66CxJF": {
-      "settings": {
-        "category_title": "Best SELLERs",
-        "collection": "best-sellers"
-      },
-      "type": "product-slider"
-    },
-    "sequence_image_X3UxWE": {
-      "settings": {
-        "title": "FORCEFLEX TECHNOLOGY",
-        "video_link": "shopify://files/videos/lentes_despiece_2 (1080p) (1).mp4"
-      },
-      "type": "sequence-image"
-    },
-    "unique_category_slider_QD6iz8": {
-      "block_order": [
-        "block_eXNQEG",
-        "block_CJCxcf",
-        "block_ifrVKK",
-        "block_kEqzLH",
-        "block_bVaCVH",
-        "block_nztpWY",
-        "block_zx8gwX",
-        "block_JC9phg"
-      ],
-      "blocks": {
-        "block_CJCxcf": {
-          "settings": {
-            "bg_image": "shopify://shop_images/unique2_7b4fce0c-3d13-49c3-b1df-50d74be025e2_1.jpg",
-            "button_Link": "",
-            "subtitle": "It returns to it's original position, seamlessly.",
-            "title": "Memory."
-          },
-          "type": "block"
-        },
-        "block_JC9phg": {
-          "settings": {
-            "bg_image": "shopify://shop_images/PugwQG0l582SU4uhyeiOR0Xdm0w_1.webp",
-            "button_Link": "",
-            "subtitle": "Worldwide. We are Authentic, the Real Deal.",
-            "title": "97 Patents."
-          },
-          "type": "block"
-        },
-        "block_bVaCVH": {
-          "settings": {
-            "bg_image": "shopify://shop_images/QR2zHZumuJjOpCVpFejlV7VVbQ_1.png",
-            "button_Link": "",
-            "subtitle": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated.",
-            "title": "Intrablock®."
-          },
-          "type": "block"
-        },
-        "block_eXNQEG": {
-          "settings": {
-            "bg_image": "shopify://shop_images/unique1_0d8c2223-4dd6-4b0d-ad3c-9df5dc5b6cbc_1.webp",
-            "button_Link": "",
-            "subtitle": "it, Twist it, Fold it. Won't break. Ever.",
-            "title": "Flex"
-          },
-          "type": "block"
-        },
-        "block_ifrVKK": {
-          "settings": {
-            "bg_image": "shopify://shop_images/PQWSsehtzGMQN0TuYTr1p8EIdlw_1.png",
-            "button_Link": "",
-            "subtitle": "You've never experienced anything like it.",
-            "title": "Comfort."
-          },
-          "type": "block"
-        },
-        "block_kEqzLH": {
-          "settings": {
-            "bg_image": "shopify://shop_images/unique4_d5369ab7-7988-4675-83ec-4c66840b6c0f_1.jpg",
-            "button_Link": "",
-            "subtitle": "Created by the world’s top tactical eyewear designer.",
-            "title": "Military Technology."
-          },
-          "type": "block"
-        },
-        "block_nztpWY": {
-          "settings": {
-            "bg_image": "shopify://shop_images/KwhgoeCYbdiXF04CUdrCFLVYmg_1.png",
-            "button_Link": "",
-            "subtitle": "Just in case",
-            "title": "Impact absortion."
-          },
-          "type": "block"
-        },
-        "block_zx8gwX": {
-          "settings": {
-            "bg_image": "shopify://shop_images/1zLNk6lK12qbtQkBbZbDKex8Cnk_1.webp",
-            "button_Link": "",
-            "subtitle": "Yes. Really.",
-            "title": "Lifetime Guarantee."
-          },
-          "type": "block"
-        }
-      },
-      "settings": {
-        "section_explore_link": "",
-        "section_explore_more": "explore more",
-        "section_padding": "false",
-        "section_title": "What makes us unique"
-      },
-      "type": "unique-category-slider"
-    },
-    "video_section_TrVPpJ": {
-      "settings": {
-        "video_link": "https://cdn.shopify.com/videos/c/o/v/b15a4a3a01a2458ba9df333f73f01907.mp4"
-      },
-      "type": "video-section"
-    }
-  }
+  ]
 }
