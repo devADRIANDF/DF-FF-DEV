@@ -228,12 +228,3 @@ section.image-sequence-container3 {
 
 
 
-
-  /* Selecciona la última imagen dentro del contenedor de imágenes del producto */
-.col-lg-8.product-single-image img:last-of-type {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
