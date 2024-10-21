@@ -220,13 +220,17 @@ section.image-sequence-container3 {
   }
 
 
-.product-single-image .p-img:last-of-type img {
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 100% !important;
-    width: auto !important;
-    padding: 20px 0 !important;
+
+
+
+  
+.product-single-image .row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap;
 }
 
-
+.product-single-image .row .col:last-child {
+    flex: 0 0 100% !important; /* Hacer que ocupe el ancho completo */
+}
