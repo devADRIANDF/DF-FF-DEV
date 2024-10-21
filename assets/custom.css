@@ -220,14 +220,13 @@ section.image-sequence-container3 {
   }
 
 
-
-
-.product-single-image .row .col:last-child .p-img img {
+.product-single-image .p-img:last-of-type img {
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    max-width: 100% !important; /* Asegura que no se extienda más allá de su contenedor */
-    padding: 20px 0 !important; /* Añade un poco de espacio arriba y abajo */
+    max-width: 100% !important;
+    width: auto !important;
+    padding: 20px 0 !important;
 }
 
 
