@@ -223,4 +223,43 @@ section.image-sequence-container3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Asegura que el contenedor sea flexbox y centrado */
+.shop-single-section .product-single-image .row {
+    display: flex !important;
+    justify-content: center !important; /* Centra los elementos dentro de la fila */
+    align-items: center !important;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten correctamente */
+}
+
+/* Apunta a la última imagen dentro del carrusel y ajústala */
+.shop-single-section .product-single-image .col:last-child .p-img img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important; /* Asegura que la imagen no se desborde */
+    width: auto !important;
+    padding: 20px 0 !important; /* Añade espacio superior e inferior */
+    text-align: center !important; /* Asegura que esté centrada */
+}
+
+/* Ajusta el tamaño de la última imagen para móviles */
+@media screen and (max-width: 500px) {
+    .shop-single-section .product-single-image .col:last-child .p-img img {
+        height: auto !important; /* Evita que se deforme en pantallas pequeñas */
+        object-fit: cover !important;
+    }
+}
+
   
