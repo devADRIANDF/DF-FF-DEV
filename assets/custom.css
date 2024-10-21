@@ -223,7 +223,13 @@ section.image-sequence-container3 {
 
 
 
-
+.product-single-image .row .col:last-child .p-img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Asegura que no se extienda más allá de su contenedor */
+    padding: 20px 0; /* Añade un poco de espacio arriba y abajo */
+}
 
 
 
