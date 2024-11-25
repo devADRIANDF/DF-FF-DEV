@@ -51,17 +51,7 @@
             <h2>{{ product.title }}</h2>
           </div>
           <div class="price">
-        <div class="product-details">
-    <h4 id="price">
-        {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
-    </h4>
-    {% if product.compare_at_price > product.price %}
-        <h4 id="compare-price" style="text-decoration: line-through; color: gray;">
-            {{ cart.currency.symbol }}{{ product.compare_at_price | money_without_currency }}
-        </h4>
-    {% endif %}
-</div>
-
+            <h4 id="price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</h4>
             <span>TAX INCLUDED</span>
           </div>
 
