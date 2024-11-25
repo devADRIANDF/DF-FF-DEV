@@ -48,9 +48,9 @@
             <h2>{{ product.title }}</h2>
           </div>
           <div class="price">
-            {% if product.compare_at_price > product.price %}
+            {% if product.compare_at_price_max > product.price %}
               <h4 id="compare-price" style="text-decoration: line-through;">
-                {{ cart.currency.symbol }}{{ product.compare_at_price | money_without_currency }}
+                {{ cart.currency.symbol }}{{ product.compare_at_price_max | money_without_currency }}
               </h4>
             {% endif %}
             
@@ -196,7 +196,7 @@
 
 <script>
   console.log({{ cart.currency.symbol | json }})
-   document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var variantInputs = document.querySelectorAll('input[name="size-list-1"]');
     var productHandle = $('#handle').val();
     var currency = $('#currency').val();
