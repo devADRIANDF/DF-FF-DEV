@@ -55,7 +55,7 @@
                     <p>5 Colors</p>
                   {% endif %}
                   <div class="price">
-  {% assign discounted_price = product.price | times: 0.9 %} {# Cambia 0.9 por el porcentaje que aplique al descuento automático #}
+  {% assign discounted_price = product.price | times: 0.9 %} 
   <span class="compare-price" style="text-decoration: line-through; color: #888;">
     {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
   </span>
