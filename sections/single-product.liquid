@@ -50,10 +50,23 @@
           <div class="title">
             <h2>{{ product.title }}</h2>
           </div>
-          <div class="price">
-            <h4 id="price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</h4>
-            <span>TAX INCLUDED</span>
-          </div>
+         <div class="price">
+  {% assign discount_percentage = 20 %} <!-- Ajusta este porcentaje al descuento aplicado en tu tienda -->
+  
+  <!-- Calcular el precio con descuento -->
+  {% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
+  {% assign discounted_price = product.price | minus: discount_value %}
+  
+  <!-- Mostrar precios -->
+  <h4 id="price">
+    {{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}
+  </h4>
+  <span class="original-price" style="text-decoration: line-through; color: gray;">
+    {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
+  </span>
+  <span>TAX INCLUDED</span>
+</div>
+
 
 
           {% unless product.has_only_default_variant %}
@@ -218,31 +231,34 @@
   }
 
   // Update variant prices based on the selected variant
-  function updateVariantPrices(product) {
-    variantInputs.forEach(function(input) {
-      input.addEventListener('change', function() {
-        var variantId = this.getAttribute('data-variant-id');
-        $('#variantId').val(variantId);
-        var newUrl = new URL(window.location.href);
-        newUrl.searchParams.set('variant', variantId);
-        window.history.replaceState({}, '', newUrl);
-        
-        // Find the selected variant
-        var selectedVariant = product.variants.find(variant => variant.id === parseInt(variantId));
-        
-        if (selectedVariant) {
-          console.log('Selected Variant Price:', selectedVariant.price / 100);
-          let price = (selectedVariant.price / 100).toFixed(2)
-          $("h4#price").text(currency + price);
-          // You can update the UI with the price if needed
-          var priceElement = document.getElementById('variant-price');
-          if (priceElement) {
-            priceElement.textContent = Price: $${(selectedVariant.price / 100).toFixed(2)};
-          }
-        }
-      });
+ function updateVariantPrices(product) {
+  variantInputs.forEach(function(input) {
+    input.addEventListener('change', function() {
+      var variantId = this.getAttribute('data-variant-id');
+      $('#variantId').val(variantId);
+      var newUrl = new URL(window.location.href);
+      newUrl.searchParams.set('variant', variantId);
+      window.history.replaceState({}, '', newUrl);
+
+      // Encontrar la variante seleccionada
+      var selectedVariant = product.variants.find(variant => variant.id === parseInt(variantId));
+
+      if (selectedVariant) {
+        console.log('Selected Variant Price:', selectedVariant.price / 100);
+
+        // Aplicar el descuento
+        var discountPercentage = 20; // Ajusta este porcentaje según tu descuento
+        var discountValue = (selectedVariant.price / 100) * discountPercentage / 100;
+        var discountedPrice = (selectedVariant.price / 100) - discountValue;
+
+        // Actualizar el precio en la interfaz
+        $("h4#price").text(currency + discountedPrice.toFixed(2));
+        $(".original-price").text(currency + (selectedVariant.price / 100).toFixed(2));
+      }
     });
-  }
+  });
+}
+
 
   // Initialize product details fetch
   fetchProductDetails(productHandle);
