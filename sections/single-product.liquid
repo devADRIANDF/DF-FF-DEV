@@ -50,17 +50,10 @@
           <div class="title">
             <h2>{{ product.title }}</h2>
           </div>
-        <div class="price">
-  {% if product.compare_at_price > product.price %}
-    <h4 id="price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</h4>
-    <span class="compare-price" style="text-decoration: line-through;">
-      {{ cart.currency.symbol }}{{ product.compare_at_price | money_without_currency }}
-    </span>
-  {% else %}
-    <h4 id="price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</h4>
-  {% endif %}
-</div>
-<p class="tax-text">TAX INCLUDED</p>
+          <div class="price">
+            <h4 id="price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</h4>
+            <span>TAX INCLUDED</span>
+          </div>
 
 
           {% unless product.has_only_default_variant %}
@@ -208,7 +201,7 @@
 
   // Fetch product details
   function fetchProductDetails(handle) {
-    fetch(`/products/${handle}.js`)
+    fetch(/products/${handle}.js)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -225,42 +218,31 @@
   }
 
   // Update variant prices based on the selected variant
- // Update variant prices based on the selected variant
-function updateVariantPrices(product) {
-  variantInputs.forEach(function(input) {
-    input.addEventListener('change', function() {
-      var variantId = this.getAttribute('data-variant-id');
-      $('#variantId').val(variantId);
-
-      // Find the selected variant
-      var selectedVariant = product.variants.find(variant => variant.id === parseInt(variantId));
-      
-      if (selectedVariant) {
-        // Update the current price
-        let price = (selectedVariant.price / 100).toFixed(2);
-        $("h4#price").text(currency + price);
-
-        // Check and update the compare_at_price
-        if (selectedVariant.compare_at_price && selectedVariant.compare_at_price > selectedVariant.price) {
-          let comparePrice = (selectedVariant.compare_at_price / 100).toFixed(2);
-
-          // Add or update the compare price element
-          if ($(".compare-price").length) {
-            $(".compare-price").text(currency + comparePrice);
-          } else {
-            $("h4#price").after(
-              `<span class="compare-price" style="text-decoration: line-through; margin-left: 10px;">${currency + comparePrice}</span>`
-            );
+  function updateVariantPrices(product) {
+    variantInputs.forEach(function(input) {
+      input.addEventListener('change', function() {
+        var variantId = this.getAttribute('data-variant-id');
+        $('#variantId').val(variantId);
+        var newUrl = new URL(window.location.href);
+        newUrl.searchParams.set('variant', variantId);
+        window.history.replaceState({}, '', newUrl);
+        
+        // Find the selected variant
+        var selectedVariant = product.variants.find(variant => variant.id === parseInt(variantId));
+        
+        if (selectedVariant) {
+          console.log('Selected Variant Price:', selectedVariant.price / 100);
+          let price = (selectedVariant.price / 100).toFixed(2)
+          $("h4#price").text(currency + price);
+          // You can update the UI with the price if needed
+          var priceElement = document.getElementById('variant-price');
+          if (priceElement) {
+            priceElement.textContent = Price: $${(selectedVariant.price / 100).toFixed(2)};
           }
-        } else {
-          // Remove the compare price if no discount
-          $(".compare-price").remove();
         }
-      }
+      });
     });
-  });
-}
-
+  }
 
   // Initialize product details fetch
   fetchProductDetails(productHandle);
@@ -305,6 +287,3 @@ function updateVariantPrices(product) {
     ]
   }
 {% endschema %}
-
-
-
