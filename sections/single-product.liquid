@@ -50,8 +50,7 @@
           <div class="title">
             <h2>{{ product.title }}</h2>
           </div>
-          <div class="price">
-            <div class="price">
+        <div class="price">
   {% if product.compare_at_price > product.price %}
     <h4 id="price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</h4>
     <span class="compare-price" style="text-decoration: line-through;">
@@ -60,8 +59,8 @@
   {% else %}
     <h4 id="price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</h4>
   {% endif %}
-  <span>TAX INCLUDED</span>
 </div>
+<p class="tax-text">TAX INCLUDED</p>
 
 
           {% unless product.has_only_default_variant %}
