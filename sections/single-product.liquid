@@ -50,13 +50,29 @@
           <div class="title">
             <h2>{{ product.title }}</h2>
           </div>
-     <div class="price" style="display: flex; align-items: center; gap: 10px;">
-  <h4 id="price" style="font-size: 1.5em; font-weight: bold; margin: 0;">
-    {{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}
-  </h4>
-  <span class="original-price" style="text-decoration: line-through; color: gray; font-size: 1.2em; margin: 0;">
-    {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
-  </span>
+    
+          
+          
+          {% assign discount_percentage = 20 %} <!-- Ajusta según tu descuento automático -->
+{% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
+{% assign discounted_price = product.price | minus: discount_value %}
+
+          
+          
+          
+         <div class="price" style="display: flex; align-items: center; gap: 10px;">
+  {% if discounted_price > 0 %}
+    <h4 id="price" style="font-size: 1.5em; font-weight: bold; margin: 0;">
+      {{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}
+    </h4>
+    <span class="original-price" style="text-decoration: line-through; color: gray; font-size: 1.2em; margin: 0;">
+      {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
+    </span>
+  {% else %}
+    <h4 id="price" style="font-size: 1.5em; font-weight: bold; margin: 0;">
+      {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
+    </h4>
+  {% endif %}
   <span style="font-size: 1em; color: gray; margin: 0;">TAX INCLUDED</span>
 </div>
 
