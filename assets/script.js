@@ -584,15 +584,21 @@ $(".addToCart").on("click", function (e) {
     success: function (data) {
       console.log("Item added to cart:", data);
       // Update cart count
-      fetch(window.Shopify.routes.root + "cart.js")
-        .then((response) => response.json())
-        .then((cartData) => {
-          $(".cartCount").text(cartData.item_count);
-          console.log("Updated cart data:", cartData);
-          var priceFloat = (cartData.items_subtotal_price / 100).toFixed(2);
-          $("#subtotalAmount").text(priceFloat);
-          updateCartDisplay(cartData);
-        });
+     fetch(window.Shopify.routes.root + "cart.js")
+  .then((response) => response.json())
+  .then((cartData) => {
+    $(".cartCount").text(cartData.item_count);
+
+    // Calcular subtotal con descuento
+    const discountPercentage = 20; // Cambia este porcentaje si es necesario
+    const originalSubtotal = cartData.items_subtotal_price / 100;
+    const discountedSubtotal = (originalSubtotal - (originalSubtotal * discountPercentage) / 100).toFixed(2);
+
+    $("#subtotalAmount").text(discountedSubtotal); // Actualizar subtotal
+    console.log("Updated cart data:", cartData);
+    updateCartDisplay(cartData);
+  });
+
       $(".mini-cart-content").addClass("mini-cart-content-toggle");
 
       $(".addToCart").css("display", "block");
@@ -744,6 +750,11 @@ function updateCartDisplay(cartData) {
 }
 
 function createCartItemHTML(item, index) {
+  // Define el porcentaje de descuento
+  const discountPercentage = 20; // Cambia este porcentaje según sea necesario
+  const originalPrice = item.price / 100; // Precio original del producto
+  const discountedPrice = (originalPrice - (originalPrice * discountPercentage) / 100).toFixed(2); // Aplica el descuento
+
   return `
     <div class="mini-cart-item clearfix">
       <div class="mini-cart-item-image">
@@ -765,7 +776,12 @@ function createCartItemHTML(item, index) {
             <li>${item.variant_title ? item.variant_title : "Black"}</li>
           </ul>
         </div>
-        <span class="price">${(item.price / 100).toFixed(2)}</span>
+        <span class="price">
+          <span class="discounted-price">€${discountedPrice}</span>
+          <span class="original-price" style="text-decoration: line-through; color: gray; font-size: 0.9em; margin-left: 5px;">
+            €${originalPrice.toFixed(2)}
+          </span>
+        </span>
       </div>
       <div class="pro-single-btn">
         <div class="quantity cart-plus-minus">
@@ -784,6 +800,7 @@ function createCartItemHTML(item, index) {
     </div>
   `;
 }
+
 
 //Ajax Search Result
 $(document).ready(function () {
