@@ -744,7 +744,12 @@ function updateCartDisplay(cartData) {
 }
 
 function createCartItemHTML(item, index) {
-  return 
+  // Define el porcentaje de descuento
+  const discountPercentage = 20; // Cambia este porcentaje según sea necesario
+  const originalPrice = item.price / 100; // Precio original del producto
+  const discountedPrice = (originalPrice - (originalPrice * discountPercentage) / 100).toFixed(2); // Aplica el descuento
+
+  return `
     <div class="mini-cart-item clearfix">
       <div class="mini-cart-item-image">
         <a href="${item.url}">
@@ -765,7 +770,12 @@ function createCartItemHTML(item, index) {
             <li>${item.variant_title ? item.variant_title : "Black"}</li>
           </ul>
         </div>
-        <span class="price">${(item.price / 100).toFixed(2)}</span>
+        <span class="price">
+          <span class="discounted-price">€${discountedPrice}</span>
+          <span class="original-price" style="text-decoration: line-through; color: gray; font-size: 0.9em; margin-left: 5px;">
+            €${originalPrice.toFixed(2)}
+          </span>
+        </span>
       </div>
       <div class="pro-single-btn">
         <div class="quantity cart-plus-minus">
@@ -782,8 +792,9 @@ function createCartItemHTML(item, index) {
         </a>
       </div>
     </div>
-  ;
+  `;
 }
+
 
 //Ajax Search Result
 $(document).ready(function () {
