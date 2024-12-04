@@ -749,7 +749,7 @@ function createCartItemHTML(item, index) {
   const originalPrice = item.price / 100; // Precio original del producto
 
   // Aplica el descuento y redondea correctamente a 2 decimales
-  const discountedPrice = Math.round((originalPrice - (originalPrice * discountPercentage) / 100) * 100) / 100;
+const discountedPrice = Math.ceil(originalPrice - (originalPrice * discountPercentage) / 100);
 
   return `
     <div class="mini-cart-item clearfix">
