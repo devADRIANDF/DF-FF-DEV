@@ -223,15 +223,14 @@ section.image-sequence-container3 {
 
 
 
-
-div.price .original-price {
-  background: none !important; /* Elimina cualquier fondo */
-  padding: 0 !important; /* Quita cualquier relleno */
-  border: none !important; /* Quita bordes */
-  text-decoration: line-through; /* Mantiene el texto tachado */
-  color: gray !important; /* Asegura el color gris */
-  font-size: 1.2em; /* Ajusta el tamaño de fuente */
-  display: inline !important; /* Asegura la alineación */
+div.price span.original-price {
+  background: none !important; /* Elimina el fondo */
+  padding: 0 !important; /* Elimina el relleno */
+  border: none !important; /* Asegura que no haya bordes */
+  text-decoration: line-through; /* Mantiene el tachado */
+  color: gray !important; /* Asegura el color */
+  font-size: 1.2em !important; /* Ajusta el tamaño de fuente */
+  display: inline !important; /* Asegura que se comporte como texto en línea */
   margin: 0 !important; /* Elimina márgenes */
 }
 
