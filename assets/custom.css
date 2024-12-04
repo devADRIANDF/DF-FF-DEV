@@ -224,6 +224,16 @@ section.image-sequence-container3 {
 
 
 
+.original-price {
+  background: none !important; /* Elimina el fondo */
+  padding: 0 !important; /* Quita cualquier relleno */
+  border: none !important; /* Asegura que no haya bordes */
+  display: inline !important; /* Evita comportamientos como bloque */
+  text-decoration: line-through; /* Mantiene el tachado */
+  color: gray; /* Cambia el color al gris */
+  font-size: 1.2em; /* Ajusta el tamaño */
+  margin: 0; /* Elimina cualquier margen */
+}
 
 
 
