@@ -12,8 +12,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "hero_section_LtyyzG": {
       "type": "hero-section",
@@ -59,13 +58,12 @@
         "block_MiUGBq",
         "block_tGHtBN"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "about_section_UxgTgY": {
       "type": "about-section",
       "settings": {
-        "title": "AS FLEXIBLE AS BAMBOO.",
+        "title": "+100 PATENTS.",
         "video_link": "shopify:\/\/files\/videos\/lentes_despiece_1 (1440p) (1).mp4"
       }
     },
@@ -120,8 +118,7 @@
         "block_RjVjBF",
         "block_xitj6D"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "sequence_image_X3UxWE": {
       "type": "sequence-image",

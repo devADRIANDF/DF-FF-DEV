@@ -12,8 +12,7 @@
     "main": {
       "type": "main-collection",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "video_hero_banner_MbRFan": {
       "type": "video-hero-banner",
