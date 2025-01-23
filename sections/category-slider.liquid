@@ -17,6 +17,11 @@
                   alt="{{ product.title }}"
                   width=""
                   height="">
+                {% if product.metafields.custom.product_text %}
+    <div class="custom-text-badge">
+      {{ product.metafields.custom.product_text.value }}
+    </div>
+  {% endif %}
               </a>
               <div class="category-info">
                 <h2>
@@ -30,7 +35,6 @@
     </div>
   </div>
 </section>
-
 
 {% schema %}
   {
