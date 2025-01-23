@@ -9,32 +9,34 @@
         {% assign collections = collections[section.settings.collection].products %}
         {% for product in collections %}
           <div class="product-item wow fadeInUp" data-wow-duration="1000ms">
-            <div class="product-img">
-              <a href="{{ product.url }}" class="product-image">
-                <div class="image-wrap">
-                  <img
-                    class="image1 hover-image"
-                    src="{{ product.featured_image | image_url: width: 800  }}"
-                    alt="{{ product.title }}"
-                    width=""
-                    height="">
-                  <img
-                    class="image2 hidden-image"
-                    src="{{ product.images[1] | image_url: width: 900  }}"
-                    alt="{{ product.title }}"
-                    width=""
-                    height="">
-                </div>
-              </a>
+           <div class="product-img">
+  <a href="{{ product.url }}" class="product-image">
+    <div class="image-wrap">
+      <img
+        class="image1 hover-image"
+        src="{{ product.featured_image | image_url: width: 800 }}"
+        alt="{{ product.title }}">
+      <img
+        class="image2 hidden-image"
+        src="{{ product.images[1] | image_url: width: 900 }}"
+        alt="{{ product.title }}">
+    </div>
 
-              <div class="cart-btn sliderAddToCart" data-itemid="{{ product.variants.first.id }}">
-                <a href="#" class="theme-btn cartBtn">Add to Cart</a>
-                <a
-                  href="#"
-                  class="theme-btn loadingBtn"
-                  style="display: none;">Loading..</a>
-              </div>
-            </div>
+    {% if product.metafields.custom.text_highlight and product.metafields.custom.text_highlight.value != blank %}
+      <div class="custom-text-badge">
+        {{ product.metafields.custom.text_highlight.value }}
+      </div>
+    {% endif %}
+  </a>
+
+  <div class="cart-btn sliderAddToCart" data-itemid="{{ product.variants.first.id }}">
+    <a href="#" class="theme-btn cartBtn">Add to Cart</a>
+    <a
+      href="#"
+      class="theme-btn loadingBtn"
+      style="display: none;">Loading..</a>
+  </div>
+</div>
             <div class="product-info">
               <h2>
                 <a href="{{ product.url }}">{{ product.title }}</a>
