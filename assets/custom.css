@@ -224,6 +224,25 @@ section.image-sequence-container3 {
 
 
 
+.product-img {
+  position: relative; /* Permite posicionar elementos internos */
+}
+
+.custom-text-badge {
+  position: absolute;
+  top: 40px; /* Baja aún más la posición desde la parte superior */
+  right: 15px; /* Mantiene la distancia desde el lado derecho */
+  background-color: #000; /* Fondo negro sólido */
+  color: #fff; /* Texto blanco */
+  padding: 8px 20px; /* Espaciado interno más grande y ancho */
+  font-size: 16px; /* Incrementa aún más el tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  border-radius: 25px; /* Forma de óvalo más amplio */
+  z-index: 10; /* Asegura que esté sobre la imagen */
+  white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+  display: inline-block; /* Mantiene el tamaño compacto */
+  text-align: center; /* Centra el texto dentro del badge */
+}
 
 
 
