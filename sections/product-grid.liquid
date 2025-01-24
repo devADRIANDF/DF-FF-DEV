@@ -26,6 +26,12 @@
                         width=""
                         height="">
                     </div>
+
+                    {% if product.metafields.custom.text_highlight and product.metafields.custom.text_highlight.value != blank %}
+                      <div class="custom-text-badge">
+                        {{ product.metafields.custom.text_highlight.value }}
+                      </div>
+                    {% endif %}
                   </a>
                   <div class="cart-btn sliderAddToCart" data-itemid="{{ product.variants.first.id }}">
                     <a href="#" class="theme-btn cartBtn">Add to Cart</a>
@@ -54,23 +60,9 @@
                   {% if product.tags contains '5 Colors' %}
                     <p>5 Colors</p>
                   {% endif %}
-               <div class="price">
-  {% assign discount_percentage = 20 %} <!-- Ajusta este porcentaje según el descuento automático -->
-
-  <!-- Calcular el valor del descuento -->
-  {% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
-
-  <!-- Calcular el precio con descuento -->
-  {% assign discounted_price = product.price | minus: discount_value %}
-
-  <!-- Mostrar los precios -->
-  <span class="discounted-price">{{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}</span>
-  <span class="original-price" style="text-decoration: line-through; color: gray;">
-    {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
-  </span>
-</div>
-
-
+                  <div class="price">
+                    <span>{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
+                  </div>
                 </div>
               </div>
             </div>
