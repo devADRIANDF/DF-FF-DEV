@@ -60,20 +60,25 @@
                   {% if product.tags contains '5 Colors' %}
                     <p>5 Colors</p>
                   {% endif %}
-            <div class="price">
-                      {% if product.compare_at_price and product.compare_at_price > product.price %}
-                        <span class="discounted-price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
-                        <span class="original-price" style="text-decoration: line-through; color: gray;">
-                          {{ cart.currency.symbol }}{{ product.compare_at_price | money_without_currency }}
-                        </span>
-                      {% else %}
-                        <span class="discounted-price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
-                      {% endif %}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            {% endfor %}
+           <div class="price">
+  {% assign discount_percentage = 20 %} <!-- Ajusta este porcentaje según el descuento automático -->
+
+  <!-- Calcular el valor del descuento -->
+  {% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
+
+  <!-- Calcular el precio con descuento -->
+  {% assign discounted_price = product.price | minus: discount_value %}
+
+  <!-- Mostrar los precios -->
+  <span class="discounted-price">{{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}</span>
+  <span class="original-price" style="text-decoration: line-through; color: gray;">
+    {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
+  </span>
+</div>
+
+            </div>
+          </div>
+        {% endfor %}
         </div>
       </div>
     </div>
