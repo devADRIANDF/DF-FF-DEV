@@ -57,16 +57,9 @@
                   <p>7 Colors</p>
                 {% endif %}
                 <div class="price">
-  {% if product.compare_at_price > product.price %}
-    <span class="discounted-price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
-    <span class="original-price" style="text-decoration: line-through; color: gray;">
-      {{ cart.currency.symbol }}{{ product.compare_at_price | money_without_currency }}
-    </span>
-  {% else %}
-    <span class="discounted-price">{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
-  {% endif %}
-</div>
-
+                  <span>{{ cart.currency.symbol }}{{ product.price | money_without_currency }}</span>
+                </div>
+              </div>
             </div>
           </div>
         {% endfor %}
