@@ -1,72 +1,89 @@
-{% assign collection_handle = section.settings.collection %}
-{% assign collection = collections[collection_handle] %}
-
-{% if collection and collection.products.size > 0 %}
-  {%- paginate collection.products by section.settings.product_count -%}
-    <section class="product-selling-section style section-padding pl-60">
-      <div class="product-wrap">
-        <div class="container-fluid">
-          <div class="row">
-            {% for product in collection.products %}
-              {% assign compare_price = product.variants.first.compare_at_price %}
-              {% assign product_price = product.variants.first.price %}
-              
-              <div class="col-xl-3 col-lg-4 col-md-6 col-6">
-                <div class="product-item wow fadeInUp d-flex flex-column" data-wow-duration="1000ms">
-                  
-                  <div class="product-img">
-                    <a href="{{ product.url }}" class="product-image">
-                      <div class="image-wrap">
-                        <img class="image1 hover-image"
-                            src="{{ product.featured_image | image_url: width: 900 }}"
-                            alt="{{ product.title }}">
-                        <img class="image2 hidden-image"
-                            src="{{ product.images[1] | image_url: width: 900 }}"
-                            alt="{{ product.title }}">
-                      </div>
-                    </a>
+{% assign limit_product = 100 %}
+{%- paginate collections.all.products by limit_product -%}
+  <section class="product-selling-section style section-padding pl-60">
+    <div class="product-wrap">
+      <div class="container-fluid">
+        <div class="row">
+          {% assign products_by_price = collections.all.products %}
+          {% assign limit = section.settings.product_count %}
+          {% for product in products_by_price limit: limit %}
+            <div class="col-xl-3 col-lg-4 col-md-6 col-6">
+              <div class="product-item wow fadeInUp" data-wow-duration="1000ms">
+                <div class="product-img">
+                  <a href="{{ product.url }}" class="product-image">
+                    <div class="image-wrap">
+                      <img
+                        class="image1 hover-image"
+                        src="{{ product.featured_image | image_url: width: 900 }}"
+                        alt="{{ product.title }}">
+                      
+                      {% if product.images.size > 1 %}
+                        <img
+                          class="image2 hidden-image"
+                          src="{{ product.images[1] | image_url: width: 900 }}"
+                          alt="{{ product.title }}">
+                      {% endif %}
+                    </div>
 
                     {% if product.metafields.custom.text_highlight and product.metafields.custom.text_highlight.value != blank %}
                       <div class="custom-text-badge">
                         {{ product.metafields.custom.text_highlight.value }}
                       </div>
                     {% endif %}
+                  </a>
+                  <div class="cart-btn sliderAddToCart" data-itemid="{{ product.variants.first.id }}">
+                    <a href="#" class="theme-btn cartBtn">Add to Cart</a>
+                    <a href="#" class="theme-btn loadingBtn" style="display: none;">Loading..</a>
                   </div>
+                </div>
+                <div class="product-info">
+                  <h2>
+                    <a href="{{ product.url }}">{{ product.title }}</a>
+                  </h2>
 
-                  <div class="product-info text-center">
-                    <h2><a href="{{ product.url }}">{{ product.title }}</a></h2>
+                  {% assign color_count = product.tags | where: " Colors" %}
+                  {% if color_count.size > 0 %}
+                    <p>{{ color_count.first | replace: ' Colors', '' }} Colors</p>
+                  {% endif %}
 
-                    {% if product.tags contains '1 Colors' %}<p>1 Color</p>{% endif %}
-                    {% if product.tags contains '2 Colors' %}<p>2 Colors</p>{% endif %}
-                    {% if product.tags contains '3 Colors' %}<p>3 Colors</p>{% endif %}
-                    {% if product.tags contains '4 Colors' %}<p>4 Colors</p>{% endif %}
-                    {% if product.tags contains '5 Colors' %}<p>5 Colors</p>{% endif %}
+                  <div class="price">
+                    {% assign discount_percentage = 20 %}
+                    {% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
+                    {% assign discounted_price = product.price | minus: discount_value %}
 
-                    <div class="price">
-                      {% if compare_price and compare_price > product_price %}
-                        <span class="discounted-price">{{ cart.currency.symbol }}{{ product_price | money_without_currency }}</span>
-                        <span class="original-price" style="text-decoration: line-through; color: gray;">
-                          {{ cart.currency.symbol }}{{ compare_price | money_without_currency }}
-                        </span>
-                      {% else %}
-                        <span class="discounted-price">{{ cart.currency.symbol }}{{ product_price | money_without_currency }}</span>
-                      {% endif %}
-                    </div>
-
-                    <div class="cart-btn sliderAddToCart" data-itemid="{{ product.variants.first.id }}">
-                      <a href="#" class="theme-btn cartBtn">Add to Cart</a>
-                      <a href="#" class="theme-btn loadingBtn" style="display: none;">Loading..</a>
-                    </div>
+                    <span class="discounted-price">{{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}</span>
+                    <span class="original-price" style="text-decoration: line-through; color: gray;">
+                      {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
+                    </span>
                   </div>
-
-                </div> <!-- Cierre de .product-item -->
-              </div> <!-- Cierre de la columna -->
-            {% endfor %}
-          </div>
-        </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div> <!-- Cierre correcto de .row -->
       </div>
-    </section>
-  {%- endpaginate -%}
-{% else %}
-  <p>No products found in the selected collection.</p>
-{% endif %}
+    </div>
+  </section>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "Product Grid",
+  "settings": [
+    {
+      "type": "range",
+      "id": "product_count",
+      "label": "Number of Products",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Grid"
+    }
+  ]
+}
+{% endschema %}
