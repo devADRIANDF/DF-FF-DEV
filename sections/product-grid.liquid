@@ -15,13 +15,17 @@
                       <img
                         class="image1 hover-image"
                         src="{{ product.featured_image | image_url: width: 900 }}"
-                        alt="{{ product.title }}">
+                        alt="{{ product.title }}"
+                        width=""
+                        height="">
                       
                       {% if product.images.size > 1 %}
                         <img
                           class="image2 hidden-image"
                           src="{{ product.images[1] | image_url: width: 900 }}"
-                          alt="{{ product.title }}">
+                          alt="{{ product.title }}"
+                          width=""
+                          height="">
                       {% endif %}
                     </div>
 
@@ -41,9 +45,20 @@
                     <a href="{{ product.url }}">{{ product.title }}</a>
                   </h2>
 
-                  {% assign color_count = product.tags | where: " Colors" %}
-                  {% if color_count.size > 0 %}
-                    <p>{{ color_count.first | replace: ' Colors', '' }} Colors</p>
+                  {% if product.tags contains '1 Colors' %}
+                    <p>1 Color</p>
+                  {% endif %}
+                  {% if product.tags contains '2 Colors' %}
+                    <p>2 Colors</p>
+                  {% endif %}
+                  {% if product.tags contains '3 Colors' %}
+                    <p>3 Colors</p>
+                  {% endif %}
+                  {% if product.tags contains '4 Colors' %}
+                    <p>4 Colors</p>
+                  {% endif %}
+                  {% if product.tags contains '5 Colors' %}
+                    <p>5 Colors</p>
                   {% endif %}
 
                   <div class="price">
