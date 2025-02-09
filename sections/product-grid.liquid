@@ -4,7 +4,7 @@
     <div class="product-wrap">
       <div class="container-fluid">
         <div class="row">
-          {% assign products_by_price = collections.products %}
+          {% assign products_by_price = collections.all.products %}
           {% assign limit = section.settings.product_count %}
           {% for product in products_by_price limit: limit %}
             <div class="col-xl-3 col-lg-4 col-md-6 col-6">
