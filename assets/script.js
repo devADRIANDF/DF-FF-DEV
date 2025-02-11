@@ -745,7 +745,7 @@ function updateCartDisplay(cartData) {
 
 function createCartItemHTML(item, index) {
   // Define el porcentaje de descuento
-  const discountPercentage = 20; // Cambia este porcentaje según sea necesario
+  const discountPercentage = 0; // Cambia este porcentaje según sea necesario
   const originalPrice = item.price / 100; // Precio original del producto
 
   // Aplica el descuento y redondea correctamente a 2 decimales
