@@ -745,11 +745,8 @@ function updateCartDisplay(cartData) {
 
 function createCartItemHTML(item, index) {
   // Define el porcentaje de descuento
-  const discountPercentage = 0; // Cambia este porcentaje según sea necesario
-  const originalPrice = item.price / 100; // Precio original del producto
+ const originalPrice = item.original_price ? item.original_price / 100 : item.price / 100; 
 
-  // Aplica el descuento y redondea correctamente a 2 decimales
-const discountedPrice = Math.ceil(originalPrice - (originalPrice * discountPercentage) / 100);
 
   return `
     <div class="mini-cart-item clearfix">
@@ -772,7 +769,7 @@ const discountedPrice = Math.ceil(originalPrice - (originalPrice * discountPerce
             <li>${item.variant_title ? item.variant_title : "Black"}</li>
           </ul>
         </div>
-        <span class="price">€${discountedPrice.toFixed(2)}</span> <!-- Solo muestra el precio con descuento -->
+        <span class="price">€${originalPrice.toFixed(2)}</span> <!-- Solo muestra el precio con descuento -->
       </div>
       <div class="pro-single-btn">
         <div class="quantity cart-plus-minus">
