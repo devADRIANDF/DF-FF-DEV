@@ -62,7 +62,7 @@
                   {% endif %}
 
                   <div class="price">
-                    {% assign discount_percentage = 20 %}
+                    {% assign discount_percentage = 0 %}
                     {% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
                     {% assign discounted_price = product.price | minus: discount_value %}
 
