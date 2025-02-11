@@ -66,10 +66,18 @@
                     {% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
                     {% assign discounted_price = product.price | minus: discount_value %}
 
-                    <span class="discounted-price">{{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}</span>
-                    <span class="original-price" style="text-decoration: line-through; color: gray;">
-                      {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
-                    </span>
+                   {% assign discount_percentage = 0 %}  {# Aquí defines si hay descuento o no #}
+{% assign discount_value = product.price | times: discount_percentage | divided_by: 100 %}
+{% assign discounted_price = product.price | minus: discount_value %}
+
+<span class="final-price">{{ cart.currency.symbol }}{{ discounted_price | money_without_currency }}</span>
+
+{% if discount_percentage > 0 %}
+  <span class="original-price" style="text-decoration: line-through; color: gray;">
+    {{ cart.currency.symbol }}{{ product.price | money_without_currency }}
+  </span>
+{% endif %}
+
                   </div>
                 </div>
               </div>
