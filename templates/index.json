@@ -91,7 +91,7 @@
             "collection_image": "shopify://shop_images/forceflex5632_1.jpg",
             "title": "PERFECT VISION, PERFECT DRIFT.",
             "button_text": "Shop FISHING",
-            "button_Link": "#"
+            "button_Link": "shopify://collections/all-products"
           }
         },
         "block_RjVjBF": {
@@ -100,7 +100,7 @@
             "collection_image": "shopify://shop_images/forceflex6060_1.jpg",
             "title": "BY CONQUERORS FOR CONQUERORS.",
             "button_text": "Shop GOLF",
-            "button_Link": "#"
+            "button_Link": "shopify://collections/all-products"
           }
         },
         "block_xitj6D": {
@@ -109,7 +109,7 @@
             "collection_image": "shopify://shop_images/forceflex5895_1_1.jpg",
             "title": "STYLE & COMFORT, AT IT'S PEAK.",
             "button_text": "Shop BICYCLE",
-            "button_Link": "#"
+            "button_Link": "shopify://collections/all-products"
           }
         }
       },
