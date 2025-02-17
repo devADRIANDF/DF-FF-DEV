@@ -58,7 +58,6 @@
         "block_MiUGBq",
         "block_tGHtBN"
       ],
-      "disabled": true,
       "settings": {}
     },
     "about_section_UxgTgY": {
@@ -233,7 +232,6 @@
     },
     "video_section_TrVPpJ": {
       "type": "video-section",
-      "disabled": true,
       "settings": {
         "video_link": "https://cdn.shopify.com/videos/c/o/v/b15a4a3a01a2458ba9df333f73f01907.mp4"
       }
