@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "single-product",
+      "blocks": {
+        "block_YkYRKP": {
+          "type": "block",
+          "settings": {
+            "title": "Product Details",
+            "description": "<p>Backed by over 97 patents, forceflex is the perfect blend of innovation and style. Bend them as many times as you want and they will always return to their original shape thanks to their memory technology. Unparalleled comfort and quality, they are perfect for both men and women.<\/p>"
+          }
+        },
+        "block_bjPd88": {
+          "type": "block",
+          "settings": {
+            "title": "Shipping",
+            "description": "<p>Receive your order within 2-3 business days.<\/p>"
+          }
+        },
+        "block_89L3xM": {
+          "type": "block",
+          "settings": {
+            "title": "Lifetime Warranty",
+            "description": "<p>We have the utmost confidence in the durability of our materials. That’s why our products come with a lifetime warranty against any defects.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_YkYRKP",
+        "block_bjPd88",
+        "block_89L3xM"
+      ],
+      "settings": {}
+    },
+    "product_slider_qUXegC": {
+      "type": "product-slider",
+      "settings": {
+        "category_title": "you might also like",
+        "collection": "golf"
+      }
+    },
+    "product_slider_TLK7fW": {
+      "type": "product-slider",
+      "settings": {
+        "category_title": "Best SELLERs",
+        "collection": "best-sellers"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_slider_qUXegC",
+    "product_slider_TLK7fW"
+  ]
+}
