@@ -27,36 +27,10 @@
             "hero_button_text": "",
             "hero_button_Link": "#"
           }
-        },
-        "block_MiUGBq": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
-            "hero_title": "STYLE, COMFORT & PERFORMANCE,",
-            "hero_subtitle": "AT IT'S PEAK.",
-            "hero_description": "Flexible sunglasses that self-adjust. Style and comfort at it's peak.",
-            "hero_button_text": "Shop Now",
-            "hero_button_Link": ""
-          }
-        },
-        "block_tGHtBN": {
-          "type": "block",
-          "disabled": true,
-          "settings": {
-            "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
-            "hero_title": "STYLE, COMFORT & PERFORMANCE,",
-            "hero_subtitle": "AT IT'S PEAK.",
-            "hero_description": "Flexible sunglasses that self-adjust. Style and comfort at it's peak.",
-            "hero_button_text": "Shop by Lifestyle",
-            "hero_button_Link": ""
-          }
         }
       },
       "block_order": [
-        "block_fjm4N8",
-        "block_MiUGBq",
-        "block_tGHtBN"
+        "block_fjm4N8"
       ],
       "settings": {}
     },
