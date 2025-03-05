@@ -36,6 +36,7 @@
     },
     "about_section_UxgTgY": {
       "type": "about-section",
+      "disabled": true,
       "settings": {
         "title": "+100 PATENTS.",
         "video_link": "shopify://files/videos/lentes_despiece_1 (1440p) (1).mp4"
@@ -96,6 +97,7 @@
     },
     "sequence_image_X3UxWE": {
       "type": "sequence-image",
+      "disabled": true,
       "settings": {
         "title": "FORCEFLEX TECHNOLOGY",
         "video_link": "shopify://files/videos/lentes_despiece_2 (1080p) (1).mp4"
@@ -196,6 +198,7 @@
     },
     "multi_layer_cEnVFA": {
       "type": "multi-layer",
+      "disabled": true,
       "settings": {
         "title": "MULTI-LAYER PROPRIETARY INTRABLOCK® POLARIZED LENS",
         "description": "Permanent 100% UVA, UVB and UVC protection infused into the lens, not coated so it never wears off.",
@@ -206,6 +209,7 @@
     },
     "video_section_TrVPpJ": {
       "type": "video-section",
+      "disabled": true,
       "settings": {
         "video_link": "https://cdn.shopify.com/videos/c/o/v/b15a4a3a01a2458ba9df333f73f01907.mp4"
       }
@@ -214,12 +218,12 @@
   "order": [
     "main",
     "hero_section_LtyyzG",
+    "unique_category_slider_QD6iz8",
     "about_section_UxgTgY",
     "product_slider_66CxJF",
     "category_slider_RyjfVk",
     "collection_box_7dtz4y",
     "sequence_image_X3UxWE",
-    "unique_category_slider_QD6iz8",
     "multi_layer_cEnVFA",
     "video_section_TrVPpJ"
   ]
