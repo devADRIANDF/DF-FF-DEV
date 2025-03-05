@@ -1,1 +1,38 @@
-{"sections":{"main":{"type":"main-collection","disabled":true,"settings":{}},"video_hero_banner_MbRFan":{"type":"video-hero-banner","settings":{"hero_background_image":"https:\/\/framerusercontent.com\/assets\/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4","hero_title":"STYLE, COMFORT & PERFORMANCE,","hero_subtitle":"AT IT'S PEAK."}},"product_grid_TiiyhP":{"type":"product-grid","settings":{"product_count":100}}},"order":["main","video_hero_banner_MbRFan","product_grid_TiiyhP"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {}
+    },
+    "video_hero_banner_MbRFan": {
+      "type": "video-hero-banner",
+      "disabled": true,
+      "settings": {
+        "hero_background_image": "https://framerusercontent.com/assets/nslEIjzOMqr3Ubfl0w3TwZTlRE8.mp4",
+        "hero_title": "STYLE, COMFORT & PERFORMANCE,",
+        "hero_subtitle": "AT IT'S PEAK."
+      }
+    },
+    "product_grid_TiiyhP": {
+      "type": "product-grid",
+      "settings": {
+        "product_count": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "video_hero_banner_MbRFan",
+    "product_grid_TiiyhP"
+  ]
+}
